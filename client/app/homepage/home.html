@@ -1,0 +1,40 @@
+
+<div class="jumbotron text-center" ng-controller = "homepage">
+    <p>This page demonstrates <span class="text-danger">nested</span> views. This is the <span class = "text-danger">{{hometext}}</span> homeview page.</p>
+    <h1>this is a node application</h1>
+    <p> Further progress will be notified {{text}}</p>
+
+    <div class = "col-md-4">
+              <label for="total">Total:{{names.length}}</label>
+    </div>
+
+    <div class = "col-md-4">
+              <label for="search">Search:</label>
+              <input ng--init = "" ng-model="q" id="search" class="form-control" placeholder="Filter text">
+    </div>
+
+    <div class = "col-md-4">
+              <label for="search">items per page:</label>
+              <input type="number" min="1" max="100" class="form-control" ng-model="pageSize">
+    </div>
+
+      <div class = 'col-md-12'>
+    <ul style = "text-align: left">
+      <li ng-repeat = "name in names track by $index">{{name}}</li>
+    </ul>
+
+  </div>
+
+
+    <div>
+    <input type = "text"  placeholder="enter your name" ng-model = "additionalNames">
+      <button type = "submit" ng-click = "add()">Submit</button>
+  </div>
+
+
+
+
+
+<!-- <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/bower_components/dirPagination/dirPagination.tpl.html"></dir-pagination-controls> -->
+
+</div>

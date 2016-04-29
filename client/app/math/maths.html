@@ -1,0 +1,23 @@
+<div class="jumbotron text-center" ng-controller = "math">
+    <p>This page demonstrates <span class="text-danger">nested</span> views. This is the <span class = "text-danger">{{text}}</span> homeview page.</p>
+    <h1>this is a node application</h1>
+    <p> Further progress will be notified {{text}}</p>
+    <div class = "col-xs-12">
+    <input type = "text" ng-model = "equation" placeholder="Enter an equation"></input>
+  <input type = "text" ng-model = "variable_value" placeholder="Give variable a value"></input>
+  <button type = "submit" ng-click = "process()">submit</button>
+  <button type = "submit" ng-click = "save()">Save</button>
+  </div>
+  <div class = "col-xs-6">
+  <p>The output is: {{output.processedValue}}</p>
+  <p>Equation: <span ng-bind-html = "output.displayedEquation"></span></p>
+</div>
+  <div class = "col-xs-6">
+    <p> Differential Orders:
+    <div ng-repeat = "value in output.differentialEquation.equation_tags"><p ng-bind-html = "value"></p></div>
+  </div>
+  <table style = "border: 1px solid black">
+    <tr style = "border-bottom: 1px solid black"><td style = "width:20px" ng-repeat = "x in output.tableObject.variable_values">{{x}}</td></tr>
+    <tr style = "border-bottom: 1px solid black"><td ng-repeat = "y in output.tableObject.corresponding_fx track by $index">{{y}}</td></tr></table>
+
+</div>

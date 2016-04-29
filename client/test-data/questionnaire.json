@@ -1,0 +1,23 @@
+{
+  "questionnaire":{
+    "totalQuestions" : 15,
+    "questions":[
+      "What is your name?",
+      "What is your age?",
+      "What is your phone number?",
+      "What is your email address?",
+      "What is your father name?",
+      "What is your mother name?",
+      "What is your hobby?",
+      "What is your favourite book?",
+      "What is your favourite food?",
+      "What is your favourite sport?",
+      "What is your favourite player?",
+      "What is your favourite animal?",
+      "What is your favourite flower?",
+      "What is your favourite hero?",
+      "What is your favourite movie?"
+    ]
+  }
+
+}
