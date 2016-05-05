@@ -15,12 +15,10 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: process.env.MONGOLAB_URI ||
-    process.env.MONGOHQ_URL ||
-    process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME ||
-    'mongodb://ngsankar:ramya@756@ds049945.mlab.com:49945/testing'
+    uri:
+    'mongodb://admin123:admin456@ds021671.mlab.com:21671/seetha_raghavan'
   },
 
-  hostname: 'https://master-contentparser.herokuapp.com'
+  hostname: 'https://mathhunter.herokuapp.com'
 
 };

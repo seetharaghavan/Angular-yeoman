@@ -6,11 +6,15 @@
 
 var errors = require('./components/errors');
 var path = require('path');
+var nameModel = require('./api/name/name.Model');
+var mongoose = require('mongoose');
 
 module.exports = function (app) {
 
   // Insert routes below
   app.use('/api/names', require('./api/name'));
+
+
 
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')

@@ -1,22 +1,31 @@
-var mongoose = require('mongoose'); 
+var mongoose = require('mongoose');
 
-var NameModel = require('../name/name.Model.js');
+var NameModel = require('../name/name.Model');
 var bodyParser = require('body-parser');
 //var EquationModel = require('../Model/equationModel.js')
 
-module.exports.create = function(req, res){
-  var nameModel = new NameModel(req.body);
+module.exports.create = function(req, res, next){
+  var inputDB = req.body;
+  var nameModel = new NameModel(inputDB);
   nameModel.save(function(err, result){
-    res.json(result)
+    if(result){
+      res.json(result)
+    }next();
+
   });
 
 }
 
-  module.exports.list = function(req, res){
-    NameModel.find({}, function(err, results){
-      res.json(results)
+  module.exports.list = function(req, res, next) {
+    var result_collection = [];
+    NameModel.find({}, function (err, results) {
+      results.forEach(function(result){
+        result_collection.push(result.name)
+      });
 
-    })
+      res.send(result_collection);
+
+    });
   }
 
   module.exports.equations = function(req, res){

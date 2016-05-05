@@ -9,13 +9,13 @@ var app = angular.module('solver', [
   app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider
       .otherwise('/');
-      
+
 $stateProvider
 
   .state('#', {
       templateUrl: 'app/nodeJs/nodejs.html'
     })
-    
+
    .state('home', {
       url: '/home',
       templateUrl: 'app/homepage/home.html',
@@ -27,7 +27,13 @@ $stateProvider
       templateUrl: 'app/math/maths.html',
       controller: 'math'
   })
-  
+
+  .state('flames', {
+    url: '/flames',
+    templateUrl: 'app/flames/flames.html',
+    controller: 'flames'
+  })
+
   }])
 
 

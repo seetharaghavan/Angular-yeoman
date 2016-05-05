@@ -8,7 +8,7 @@ app.controller('math', ['$scope', 'equation_solver','$http',  function($scope, e
   $scope.process = function(){
   var equation = $scope.equation
   var variable_value = $scope.variable_value;
-  $scope.output = equation_solver.equation($scope.equation, $scope.variable_value);
+  $scope.output = equation_solver.solver($scope.equation, $scope.variable_value);
 //  $scope.save();
   return $scope.output;
 }
